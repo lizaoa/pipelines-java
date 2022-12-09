@@ -8,7 +8,8 @@ trigger:
 
 pool:
   #vmImage: ubuntu-latest
-  vmImage: windows-latest
+  #vmImage: windows-latest
+  name: my-win-pool
 steps:
 - task: Maven@3
   inputs:
