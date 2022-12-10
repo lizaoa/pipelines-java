@@ -14,5 +14,5 @@ steps:
 - powershell: powershell(new-object system.net.webclient).downloadfile('https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip','aaa.zip')
 - script: |
     echo Starting the build
-    mvn package
+    .\apache-maven-3.8.6\bin\mvn -version
   displayName: 'Build with Maven'
