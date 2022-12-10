@@ -15,5 +15,5 @@ steps:
 - powershell: powershell -c " Expand-Archive aaa.zip ."
 - script: |
     echo Starting the build
-    .\apache-maven-3.8.6\bin\mvn pom.xml package
+    .\apache-maven-3.8.6\bin\mvn package
   displayName: 'Build with new Maven'
