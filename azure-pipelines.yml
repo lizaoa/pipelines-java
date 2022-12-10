@@ -14,7 +14,7 @@ steps:
 #- powershell: powershell(new-object system.net.webclient).downloadfile('https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip','aaa.zip')
 #- powershell: powershell -c " Expand-Archive aaa.zip ."
 - script: |
-    echo Starting the build
-    echo $env:PATH
+    cmd set PATH=%PATH%;.\apache-maven-3.8.6\bin
+    cmd PATH
     #.\apache-maven-3.8.6\bin\mvn package
   displayName: 'Build with new Maven'
