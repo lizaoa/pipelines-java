@@ -16,4 +16,5 @@ steps:
 - script: |
     echo Starting the build
     .\apache-maven-3.8.6\bin\mvn -version
+    .\apache-maven-3.8.6\bin\mvn  package
   displayName: 'Build with Maven'
