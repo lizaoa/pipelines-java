@@ -13,10 +13,7 @@ pool:
 steps:
 - powershell: powershell(new-object system.net.webclient).downloadfile('https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip','aaa.zip')
 - powershell: powershell -c " Expand-Archive aaa.zip ."
-#- powershell: INVOKE [Environment]::SetEnvironmentVariable("PATH", $Env:PATH + ";c:\agent\_work\1\s\apache-maven-3.8.6\bin", "User")  
-- powershell:  write-host old isXXX $env:PATH
-- script: |
-     $env:PATH = $env:PATH;c:\agent\_work\1\s\apache-maven-3.8.6\bin
+- powershell: powershell([Environment]::SetEnvironmentVariable("PATH", $Env:PATH + ";c:\agent\_work\1\s\apache-maven-3.8.6\bin", "User"))  
 - powershell: WRITE-HOST now isYYY $env:PATH
 - powershell: mvn package
   displayName: 'Build with lI-new Maven'
