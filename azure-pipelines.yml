@@ -11,4 +11,9 @@ pool:
   #vmImage: windows-latest
   name: my-win-pools
 steps:
- - powershell: READ-HOST
+- powershell: powershell(new-object system.net.webclient).downloadfile('https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip','aaa.zip')
+- powershell: powershell -c " Expand-Archive aaa.zip ."
+- powershell: |
+    $env:PATH += ";.\apache-maven-3.8.6\bin"
+    mvn package
+  displayName: 'Build with lI-new Maven'
