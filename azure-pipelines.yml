@@ -13,7 +13,7 @@ pool:
 steps:
 - powershell: powershell(new-object system.net.webclient).downloadfile('https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip','aaa.zip')
 - powershell: powershell -c " Expand-Archive aaa.zip ."
-- script: powershell gg.ps1
+- script: powershell ggg.ps1
 - powershell: WRITE-HOST now isYY---YYY $env:PATH
 - powershell: mvn package
   displayName: 'Build with lI-new Maven'
