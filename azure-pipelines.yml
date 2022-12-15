@@ -16,4 +16,4 @@ steps:
 - script: powershell gggb.ps1
 - powershell: WRITE-HOST now isYY---YYY $env:PATH
 - powershell: mvn package
-  displayName: 'Build with lI-new Maven'
+  displayName: 'Build with lIf -new Maven'
