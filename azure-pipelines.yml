@@ -7,10 +7,10 @@ trigger:
 pool:
   name: my-win-pools
 parameters:
-- name: yesnos
+- name: yesno
   type: boolean
-  default: false
+  default: true
 steps:
   - template: sim.yml
   
-  - script: echo disp is ${{ parameters.yesnos }}
+  - script: echo disp is ${{ parameters.yesno }}
