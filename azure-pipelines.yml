@@ -1,8 +1,7 @@
 # File: azure-pipelines.yml
 trigger:
-- main
-pool:
- vmimage: ubuntu-latest
+- nb
+
 
 extends:
   template: start.yml
