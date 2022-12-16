@@ -8,9 +8,9 @@ pool:
   name: my-win-pools
 parameters:
 - name: yesno
-  type: boolean
-  default: true
+  type: string
+  default: trues
 
 steps:
-  - ${{ if eq(parameters.yesno,true) }}:
-    - bash: echo "it is true"
+  - ${{ if eq(parameters.yesno,'trues') }}:
+    - bash: echo "it is trues"
