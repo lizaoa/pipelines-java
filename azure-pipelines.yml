@@ -4,7 +4,7 @@ trigger:
 pool:
   name: my-win-pools
 
-extends:
-  template: sim.yml
-  parameters:
-    yesno: falsE
+steps:
+  - template: sim.yml
+    parameters:
+      yesno: falSE
