@@ -25,4 +25,4 @@ steps:
     echo The Path is $PATH
     mvn -version
   displayName: Test disp
-- template: azure-pipeline.yml
+- template: azure-pipelines.yml
