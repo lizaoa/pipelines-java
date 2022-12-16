@@ -9,7 +9,7 @@ pool:
 parameters:
 - name: yesno
   type: boolean
-  default: false
+  default: true
 
 steps:
   - ${{ if eq(parameters.yesno,true) }}:
