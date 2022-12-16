@@ -5,8 +5,7 @@ parameters:
   default: [] # default value of buildSteps
 stages:
 - stage: secure_buildstage
-  pool:
-    vmImage: windows-latest
+
   jobs:
   - job: secure_buildjob
     steps:
