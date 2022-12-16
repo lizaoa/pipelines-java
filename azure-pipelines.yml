@@ -1,6 +1,8 @@
 # File: azure-pipelines.yml
 trigger:
 - nb
+pool:
+name: my-win-pools
 
 extends:
   template: sim.yml
