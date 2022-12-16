@@ -1,7 +1,7 @@
 parameters:
 - name: yesNo
   type: boolean
-  default: fasle
+  default: false
   
 steps:
 - script: echo ee is ${{ parameters.Yesno }}
