@@ -7,4 +7,4 @@ pool:
 extends:
   template: sim.yml
   parameters:
-    yesno: falses
+    yesno: falsE
