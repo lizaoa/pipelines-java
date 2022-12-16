@@ -16,7 +16,7 @@ stages:
 
     - ${{ each step in parameters.buildSteps }}:
       - ${{ each pair in step }}:
-          ${{ if eq(pair.key, 'echo') }}:
+          ${{ if eq(pair.key, 'echo ') }}:
             '${{ pair.key }}': '${{ pair.value }}'
         
     - script: echo This happens after code
