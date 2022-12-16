@@ -1,10 +1,10 @@
 # File: azure-pipelines.yml
 trigger:
-  - nb
+- nb
 pool:
   name: my-win-pools
 
 extends:
   template: sim.yml
   parameters:
-    yesno: false
+    yesno: falses
