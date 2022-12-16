@@ -11,8 +11,6 @@ parameters:
   type: boolean
   default: false
 
-extends:
-  template: sim.yml
-  parameters:
-    yeSno: true
-  
+steps:
+  - ${{ if eq(parameters.yesno,true) }}:
+    - bash: echo "it is true"
