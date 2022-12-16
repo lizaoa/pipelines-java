@@ -8,3 +8,4 @@ steps:
   - template: sim.yml
     parameters:
       yesno: falSE
+  - script: echo disp is ${{ parameters.yesno  }}
