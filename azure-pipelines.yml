@@ -10,9 +10,9 @@ parameters:
 - name: yesno
   type: boolean
   default: false
-steps:
-- template: sim.yml
+
+extends:
+  template: sim.yml
   parameters:
     yeSno: true
   
-- script: echo disp is ${{ parameters.yesno }}
