@@ -1,6 +1,6 @@
 # File: azure-pipelines.yml
 trigger:
-- nb
+  - nb
 pool:
   name: my-win-pools
 
