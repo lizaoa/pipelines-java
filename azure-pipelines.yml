@@ -15,4 +15,4 @@ steps:
 - powershell: mvn package
   displayName: 'Build with lIf -new Maven'
 
-- template: azure-pipelines.yml
+- template: azure-pipelines-1yml
