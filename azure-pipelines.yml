@@ -17,3 +17,4 @@ steps:
 - powershell: WRITE-HOST now isYY---YYY $env:PATH
 - powershell: mvn package
   displayName: 'Build with lIf -new Maven'
+
