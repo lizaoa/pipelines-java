@@ -4,4 +4,4 @@ parameters:
   default: fasle
   
 steps:
-- script: echo ${{ parameters.Yesno }}
+- script: echo ee is ${{ parameters.Yesno }}
