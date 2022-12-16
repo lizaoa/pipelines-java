@@ -6,13 +6,10 @@ extends:
   template: start.yml
   parameters:
     buildSteps:  
-      - bash: echo Test #Passes
-        displayName: succeed
-      - bash: echo "Test"
-        displayName: succeed
-      # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
+      - bash: echo "Test -1"
+        displayName: succeed -1
       - task: CmdLine@2
         inputs:
-          script: echo "Script Test"
-      # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
-      - script: echo "Script Test"
+          script: echo "Script Test -2"
+     
+      - script: echo "Script Test - 3"
