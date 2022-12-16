@@ -17,7 +17,7 @@ stages:
 
     - ${{ each step in parameters.buildSteps }}:
       - ${{ each pair in step }}:
-          ${{ if ne(pair.value, 'CmdLine') }}:
+          ${{ if ne(pair.value, ' echo "Test -1"') }}:
             ${{ pair.key }}: ${{ pair.value }}             
     - script: echo This happens after code
       displayName: 'Base: Signing'
