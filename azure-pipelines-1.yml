@@ -21,6 +21,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- bash: echo The Path is $PATH
-  displayName: Test disp
-- template: azure-pipelines.yml
+- bash: echo The Path is $(Build.BinariesDirectory)
+
+
