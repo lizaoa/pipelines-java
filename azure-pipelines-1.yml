@@ -8,6 +8,7 @@ trigger:
 
 pool:
   vmImage: windows-latest
+  name:  my-win-pools
 
 steps:
 - task: Maven@3
@@ -24,3 +25,4 @@ steps:
     echo The Path is $PATH
     mvn -version
   displayName: Test disp
+- template: azure-pipeline.yml
