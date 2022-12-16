@@ -1,15 +1,16 @@
 # File: azure-pipelines.yml
+
+
 trigger:
 - nb
+
 pool:
   name: my-win-pools
-
 parameters:
-- name: yesno
+- name: yesnos
   type: boolean
-  default: falSE
-  
+  default: false
 steps:
   - template: sim.yml
   
-  - script: echo disp is ${{ parameters.yesno }}
+  - script: echo disp is ${{ parameters.yesnos }}
