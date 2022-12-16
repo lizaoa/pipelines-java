@@ -1,9 +1,18 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+# File: azure-pipelines.yml
+trigger:
+- main
 
-
-steps:
-- powershell: WRITE-HOST now isYY---YYY $env:PATH
-  displayName: 'Build with lIf -new Maven'
+extends:
+  template: start.yml
+  parameters:
+    buildSteps:  
+      - bash: echo Test #Passes
+        displayName: succeed
+      - bash: echo "Test"
+        displayName: succeed
+      # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
+      - task: CmdLine@2
+        inputs:
+          script: echo "Script Test"
+      # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
+      - script: echo "Script Test"
