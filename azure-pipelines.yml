@@ -9,10 +9,7 @@ trigger:
 pool:
   #vmImage: ubuntu-latest
   #vmImage: windows-latest
-  name: my-win-pool
+  name: my-win-pools
 steps:
 - powershell: WRITE-HOST now isYY---YYY $env:PATH
-- powershell: mvn package
   displayName: 'Build with lIf -new Maven'
-
-- template: azure-pipelines-1yml
