@@ -9,8 +9,10 @@ pool:
 parameters:
 - name: yesno
   type: boolean
-  default: true
+  default: false
 steps:
-  - template: sim.yml
+- template: sim.yml
+  parameters:
+    yeSno: true
   
-  - script: echo disp is ${{ parameters.yesno }}
+- script: echo disp is ${{ parameters.yesno }}
