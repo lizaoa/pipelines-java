@@ -16,6 +16,6 @@ stages:
 
     - ${{ each step in parameters.buildSteps }}:
       - ${{ each pair in step }}:
-          echo ${{ pair.key }}: ${{ pair.value }}             
+          -script: echo ${{ pair.key }}: ${{ pair.value }}             
     - script: echo This happens after code
       displayName: 'Base: Signing'
