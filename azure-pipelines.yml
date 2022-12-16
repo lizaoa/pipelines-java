@@ -2,13 +2,7 @@
 trigger:
 - nb
 
-
 extends:
-  template: start.yml
+  template: sim.yml
   parameters:
-    buildSteps:  
-      - bash: echo Test #Passes
-        displayName: succeed
-      - bash: echo "Test"
-        displayName: succeed
-      - script: echo "Script Test"
+    yesno: false
