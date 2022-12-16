@@ -16,7 +16,8 @@ stages:
 
     - ${{ each step in parameters.buildSteps }}:
       - ${{ each pair in step }}:
-         -${{ each valuea in pair.value  }};
-            -script: echo ${{ valuea }}     
+          ${{ if eq(pair.value, 'echo Test1') }}: 
+            # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
+            '${{ pair.value }}': error         
     - script: echo This happens after code
       displayName: 'Base: Signing'
