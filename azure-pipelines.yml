@@ -2,7 +2,7 @@
 trigger:
 - nb
 pool:
-name: my-win-pools
+  name: my-win-pools
 
 extends:
   template: sim.yml
