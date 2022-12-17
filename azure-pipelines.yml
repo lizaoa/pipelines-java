@@ -11,14 +11,12 @@ parameters:
 - name: myObject
   type: object
   default: 
-    foo: FOO
-    things:
-    - one
-    - two
-    - three
+    - one: 1
+    - two: 2
+    - three: 3
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - ${{ if ne(a.value,'FOO') }}:
-        - ${{ each b in a.value }}:      
-          - script: echo ttttt  ----${{ b.value }}--${{ b.key }}- ${{ b }}
+#      - ${{ if ne(a.value,'FOO') }}:
+#        - ${{ each b in a.value }}:      
+          - script: echo ttttt  ----${{ a.two }}
