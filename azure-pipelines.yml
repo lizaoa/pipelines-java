@@ -1,10 +1,10 @@
-# File: azure-pipelines.yml
+parameters:
+- name: 'restoreProjects'
+  default: ''
+  type: string
+- name: 'buildProjects'
+  default: ''
+  type: string
 
-# This will fail since it doesn't set the "solution" parameter to anything,
-# so the template will use its default of an empty string
-pool:
-  vmimage: windows-latest
 steps:
-- template: steps/msbuild.yml
-  parameters:
-      solution: abcde
+- script: echo ${{ coalesce(parameters.foo, parameters.bar, 'Nothing to see') }}
