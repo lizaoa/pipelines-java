@@ -16,5 +16,5 @@ parameters:
            bbb:vvv            
 steps:
 - ${{ each step in parameters.myobject }}:
-    - ${{ if eq(parameters.myobject.bash.aaaa.bbb,'vvv') }}:
+    - ${{ if eq(parameters.myobject.bash.aaaa.bbb.value,'vvv') }}:
           - script: echo gggg --
