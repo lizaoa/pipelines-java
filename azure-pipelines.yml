@@ -20,5 +20,5 @@ parameters:
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - ${{ if eq(a.value,'FOO') }}:
-         - script: echo ${{ a.key }}
+      - ${{ if eq(a.value,'foo') }}:
+         - script: echo ${{ a.value }}
