@@ -10,11 +10,9 @@ parameters:
   default: a string
 - name: myObject
   type: object
-  default:
-    - one: twww
-  
-    # foo: FOO
-    # bar: BAR
+  default: 
+     foo: FOO
+     bar: BAR
     # things:
     # - one1
     # - two2
