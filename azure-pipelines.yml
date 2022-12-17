@@ -12,8 +12,10 @@ parameters:
   type: stepList
   default: 
     - bash: echo one 1
-    - bash: echo two 2
     - script: echo three 3
+    - task: wwww
+      inputs: 
+         script: echo eeee
 
 steps:
 - ${{ each step in parameters.myObject }}:
