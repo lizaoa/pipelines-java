@@ -14,7 +14,7 @@ parameters:
   type: stepList
   default:
     - script: echo step one
-      displayname: gggg
+      displayName: succeed
     - script: echo step two
 
 trigger: none
