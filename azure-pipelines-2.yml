@@ -11,7 +11,7 @@ parameters:
 - name: myObject
   type: object
   default:
-   - one two
+    - one: twww
   
     # foo: FOO
     # bar: BAR
@@ -26,5 +26,5 @@ parameters:
 
 
 steps:
-- ${{ each avalueAn in parameters.myObject }}:
-  - script: echo ${{ avaluean }}
+- ${{ each a in parameters.myObject }}:
+      - script: echo ${{ a.one }}
