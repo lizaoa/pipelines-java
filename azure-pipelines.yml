@@ -11,8 +11,8 @@ parameters:
 - name: myObject
   type: object
   default: 
-    - foo FOOS
-    - bar BARS
+    - foo: FOOS
+    - bar: BARS
     # things:
     # - one1
     # - two2
@@ -25,4 +25,4 @@ parameters:
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - script: echo ${{ a }}
+      - script: echo ${{ a.foo }}
