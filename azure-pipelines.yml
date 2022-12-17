@@ -1,9 +1,9 @@
 parameters:
 - name: 'restoreProjects'
-  default: ''
+  default: 'aaaa'
   type: string
 - name: 'buildProjects'
-  default: ''
+  default: 'bbbb'
   type: string
 
 steps:
