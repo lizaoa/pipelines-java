@@ -51,8 +51,7 @@ parameters:
 
 
 jobs: 
-- job: stepListNameaa
-  steps: ${{ parameters.mySteplist }}
 - job: myStepnnnnnn
   steps:
-    - ${{ parameters.myStep }}
+    - script: echo ${{ parameters.myMultiString }}
+  #  - script: echo ${{ parameters.myObject }}
