@@ -19,4 +19,4 @@ steps:
 - ${{ each pair in parameters.myObject }}:
 #      - ${{ if eq(a.one,'1') }}:
 #        - ${{ each b in a.value }}:      
-          - script: echo ttt${{ pair.key }}----${{ pair.value}}
+          - script: echo ttt --${{ pair.key }}----${{ pair.value}}--${{ pair.two}}
