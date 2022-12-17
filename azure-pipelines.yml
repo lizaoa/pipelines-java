@@ -23,7 +23,7 @@ jobs:
   steps: 
   - ${{ each step in parameters.mySteplist }}:
       - ${{ each pair in step }}:
-          - bash: echo ssssss   # ${{ pair.key }}: ${{ pair.value }}
+          - bash: echo ssssss ${{ pair.key }}   # ${{ pair.key }}: ${{ pair.value }}
 # - job: myStep
 #   steps:
 #     - ${{ parameters.myStep }}
