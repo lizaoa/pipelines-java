@@ -1,7 +1,7 @@
 pool:
   name: my-win-pools
 trigger:
-  tmstudy
+  - none
 
 parameters:
 - name: myString
