@@ -1,9 +1,28 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+pool:
+  name: my-win-pools
+
+trigger:
+  - none
+
+parameters:
+- name: myString
+  type: string
+  default: a string
+- name: myObject
+  type: object
+  default: 
+    - foo: FOO
+    - bar: BAR
+    # things:
+    # - one1
+    # - two2
+    # - three
+    # nested:
+    #   one: apple
+    #   two: pear
+    #   count: 3
 
 
 steps:
-- powershell: WRITE-HOST now isYY---YYY $env:PATH
-  displayName: 'Build with lIf -new Maven'
+- ${{ each a in parameters.myObject }}:
+      - script: echo ${{ a.value }}
