@@ -20,5 +20,5 @@ parameters:
 steps:
 - ${{ each a in parameters.myObject }}:
       - ${{ if ne(a.value,'FOO') }}:
-        - ${{ each b in parameters.myObject }}:      
-          - script: echo ttttt b.value
+        - ${{ each b in a.value }}:      
+          - script: echo ttttt b - ${{ b }}
