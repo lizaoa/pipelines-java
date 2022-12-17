@@ -1,31 +1,18 @@
-parameters:
+# File: azure-pipelines.yml
+trigger:
+- main
 
-- name: myMultiString
-  type: string
-  default: default
-  values:
-  - default
-  - ubuntu
-- name: myStep
-  type: step
-  default:
-    script: echo my step
-- name: mySteplist
-  type: stepList
-  default:
-    - task: CmdLine@2
-      inputs:
-        script: echo "Script Test"
-    - script: echo step two
-
-trigger: none
-
-jobs: 
-- job: stepList
-  steps: 
-  - ${{ each step in parameters.mySteplist }}:
-      - ${{ each pair in step }}:
-          - bash: echo ssssss --${{ pair.key }}--   # ${{ pair.key }}: ${{ pair.value }}
-# - job: myStep
-#   steps:
-#     - ${{ parameters.myStep }}
+extends:
+  template: start.yml
+  parameters:
+    buildSteps:  
+      - bash: echo Test #Passes
+        displayName: succeed
+      - bash: echo "Test"
+        displayName: succeed
+      # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
+      - task: CmdLine@2
+        inputs:
+          script: echo "Script Test"
+      # Step is rejected by raising a YAML syntax error: Unexpected value 'CmdLine@2'
+      - script: echo "Script Test"
