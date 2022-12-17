@@ -7,4 +7,4 @@ parameters:
   type: string
 
 steps:
-- script: echo ${{ coalesce(parameters.foo, parameters.bar, 'Nothing to see') }}
+- script: echo ${{ coalesce(parameters.restoreProjects, parameters.buildProjects, 'Nothing to see') }}
