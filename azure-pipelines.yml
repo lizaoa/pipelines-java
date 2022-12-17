@@ -4,3 +4,5 @@
 # so the template will use its default of an empty string
 steps:
 - template: steps/msbuild.yml
+  parameters:
+      solution: abcde
