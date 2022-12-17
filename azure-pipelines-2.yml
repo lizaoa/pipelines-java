@@ -1,5 +1,6 @@
 pool:
   name: my-win-pools
+
 trigger:
   - none
 
@@ -48,7 +49,6 @@ parameters:
     - script: echo step one
     - script: echo step two
 
-trigger: none
 
 jobs: 
 - job: stepList
