@@ -53,5 +53,4 @@ parameters:
 jobs: 
 - job: myStepnnnnnn
   steps:
-    - script: echo ${{ parameters.myMultiString }}
-  #  - script: echo ${{ parameters.myObject }}
+    - script: echo ${{ parameters.myObject.value }}
