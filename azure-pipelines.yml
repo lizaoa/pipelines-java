@@ -1,21 +1,7 @@
-#azure-pipeline.yml
+# File: azure-pipelines.yml
 
-trigger: none
+variables:
+- template: vars.yml  # Template reference
 
-pool:
-  vmImage: windows-latest
-
-extends:
-  template: testing-template.yml
-  parameters:
-    testSet:
-    - job: positive_test
-      templateContext:
-        expectedHTTPResponseCode: 200
-      steps:
-      - script: echo "Run positive test" 
-    - job: negative_test
-      templateContext:
-        expectedHTTPResponseCode: 500
-      steps:
-      - script: echo "Run negative test"
+steps:
+- script: echo My favorite vegetable is ${{ variables.favoriteVeggie }}.
