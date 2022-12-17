@@ -9,14 +9,14 @@ parameters:
   type: string
   default: a string
 - name: myObject
-  type: object
+  type: stepList
   default: 
-    - one: 1
-    - two: 2
-    - three: 3
+    - bash: echo one 1
+    - bash: echo two 2
+    - script: echo three 3
 
 steps:
 - ${{ each pair in parameters.myObject }}:
 #      - ${{ if eq(a.one,'1') }}:
 #        - ${{ each b in a.value }}:      
-          - script: echo ttt --${{ pair.key }}----${{ pair.value}}--${{ pair.two}}
+          - script: echo ttt --${{ pair.key }}----${{ pair.value}}--${{ pair.bash}}
