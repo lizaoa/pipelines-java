@@ -16,7 +16,8 @@ parameters:
     - script: echo three 3
 
 steps:
-- ${{ each pair in parameters.myObject }}:
+- ${{ each step in parameters.myObject }}:
+  - ${{ each pair in step }}:
 #      - ${{ if eq(a.one,'1') }}:
 #        - ${{ each b in a.value }}:      
-          - script: echo gggg --${{ pair.key }}----${{ pair.value }}--${{ pair.bash }}
+          - script: echo gggg --'${{ pair.key }}'
