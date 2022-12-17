@@ -1,7 +1,6 @@
 # File: azure-pipelines.yml
 
-variables:
-- template: vars.yml  # Template reference
-
+# This will fail since it doesn't set the "solution" parameter to anything,
+# so the template will use its default of an empty string
 steps:
-- script: echo My favorite vegetable is $(favoriteVeggie).
+- template: steps/msbuild.yml
