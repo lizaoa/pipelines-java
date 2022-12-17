@@ -26,4 +26,4 @@ parameters:
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - script: echo ${{ a }}
+      - script: echo ${{ a.value }}
