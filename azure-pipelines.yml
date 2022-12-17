@@ -20,6 +20,6 @@ parameters:
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - ${{ if eq(a.value,'things') }}:
+      - ${{ if eq(a.value,'BAR') }}:
       #  - ${{ each b in a.value }}:      
           - script: echo ttttt
