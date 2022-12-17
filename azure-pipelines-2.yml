@@ -51,8 +51,8 @@ parameters:
 
 
 jobs: 
-- job: stepList
+- job: stepListNameaa
   steps: ${{ parameters.mySteplist }}
-- job: myStep
+- job: myStepnnnnnn
   steps:
     - ${{ parameters.myStep }}
