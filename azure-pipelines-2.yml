@@ -11,8 +11,8 @@ parameters:
 - name: myObject
   type: object
   default:
-  - one
-  - two
+   - one two
+  
     # foo: FOO
     # bar: BAR
     # things:
