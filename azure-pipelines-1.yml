@@ -11,9 +11,10 @@ parameters:
 - name: myObject
   type: object
   default: 
-    bash:
+    - bash:
         aaaa:
            bbb:vvv            
 steps:
-- ${{ if eq(parameters.myobject.bash.aaaa.bbb,'vvv') }}:
+- ${{ each step in parameters.myobject }}:
+    - ${{ if eq(parameters.myobject.bash.aaaa.bbb,'vvv') }}:
           - script: echo gggg --
