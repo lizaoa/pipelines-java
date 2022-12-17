@@ -18,9 +18,7 @@ parameters:
     - two
     - three
 
-
-
-
 steps:
 - ${{ each a in parameters.myObject }}:
-      - script: echo ${{ a.value.value }}
+      - ${{ if eq(a.value,'FOO') }}:
+         - script: echo ${{ a.key }}
