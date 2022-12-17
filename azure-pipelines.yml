@@ -20,7 +20,10 @@ trigger: none
 
 jobs: 
 - job: stepList
-  steps: ${{ parameters.mySteplist }}
+  steps: 
+  - ${{ each step in parameters.mySteplist }}:
+      - ${{ each pair in step }}:
+          ${{ pair.key }}: ${{ pair.value }}
 - job: myStep
   steps:
     - ${{ parameters.myStep }}
