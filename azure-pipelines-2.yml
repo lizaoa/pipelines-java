@@ -11,18 +11,18 @@ parameters:
 - name: myObject
   type: object
   default: 
-    foo: FOO
-    bar: BAR
-    things:
-    - one
-    - two
-    - three
+    - foo: FOO
+    - bar: BAR
+    # things:
+    # - one1
+    # - two2
+    # - three
+    # nested:
+    #   one: apple
+    #   two: pear1
+    #   count: 3
 
-
-
-trigger:
-   none
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - script: echo ${{ a.value.value }}
+      - script: echo ${{ a.value }}
