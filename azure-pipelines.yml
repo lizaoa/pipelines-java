@@ -12,7 +12,6 @@ parameters:
   type: object
   default: 
     foo: FOO
-    bar: BAR
     things:
     - one
     - two
@@ -20,6 +19,6 @@ parameters:
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - ${{ if eq(a.value,'BAR') }}:
+      - ${{ if eq(a.value,'FOO') }}:
       #  - ${{ each b in a.value }}:      
           - script: echo ttttt
