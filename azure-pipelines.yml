@@ -20,4 +20,4 @@ steps:
   - ${{ each pair in step }}:
 #      - ${{ if eq(a.one,'1') }}:
 #        - ${{ each b in a.value }}:      
-          - script: echo gggg --'${{ pair.key }}'--${{ pair.value.CmdLine }}---${{ pair.CmdLine }}
+          - script: echo gggg --'${{ pair.key }}'--'${{ pair.value.CmdLine }}'---'${{ pair.CmdLine }}'
