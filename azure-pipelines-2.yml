@@ -16,8 +16,8 @@ parameters:
     # foo: FOO
     # bar: BAR
     # things:
-    # - one
-    # - two
+    # - one1
+    # - two2
     # - three
     # nested:
     #   one: apple
