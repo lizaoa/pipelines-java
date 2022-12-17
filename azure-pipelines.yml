@@ -12,9 +12,9 @@ parameters:
   type: object
   default: 
      foo: 
-       - FOO1
-       - FOO2
-       - FOO3
+       - FOO1:001
+       - FOO2:002
+       - FOO3:003
      bar: BARS
 
 
