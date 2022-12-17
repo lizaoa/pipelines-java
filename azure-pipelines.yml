@@ -17,6 +17,6 @@ parameters:
 
 steps:
 - ${{ each a in parameters.myObject }}:
-      - ${{ if eq(a.one,'one') }}:
+      - ${{ if eq(a.one,'1') }}:
 #        - ${{ each b in a.value }}:      
           - script: echo ttttt  ----${{ a.value }}
