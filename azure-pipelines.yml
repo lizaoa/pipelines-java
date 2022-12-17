@@ -16,7 +16,7 @@ parameters:
     - three: 3
 
 steps:
-- ${{ each a in parameters.myObject }}:
-      - ${{ if eq(a.one,'1') }}:
+- ${{ each pair in parameters.myObject }}:
+#      - ${{ if eq(a.one,'1') }}:
 #        - ${{ each b in a.value }}:      
-          - script: echo ttttt  ----${{ a.one}}
+          - script: echo ttt${{ pair.key }}----${{ pair.value}}
