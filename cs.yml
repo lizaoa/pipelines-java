@@ -12,4 +12,4 @@ steps:
     SOLUTION: ${{ parameters.solution }}
   displayName: Check for required parameters
   name: stna
-- bash: echo ${{ parameters.solution }}--$sta.SOLUTION---$(sta.SOLUTION)
+- bash: echo ${{ parameters.solution }}--$sta.SOLUTION---$(stna.SOLUTION)--$env:SOLUTION--$stna.env:SOLUTION--%SOLUTION%
