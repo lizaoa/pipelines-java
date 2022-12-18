@@ -11,7 +11,7 @@ variables:
 parameters:
 - name: myString
   type: string
-  default: aaa ${{variables.bef}} ccc
+  default: aaaa
 - name: myObject
   type: object
   default: 
@@ -20,4 +20,4 @@ parameters:
 
 
 steps:
-- script: echo this is ${{parameters.mystring}}
+- script: echo this is ${{ variables.beF }}
