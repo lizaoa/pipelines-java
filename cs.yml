@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: ''
+  default: 'eee'
   type: string
 
 steps:
