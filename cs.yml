@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: 'pppppii'
+  default: ''
   type: string
 
 steps:
