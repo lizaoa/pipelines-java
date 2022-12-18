@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: ''
+  default: 'VVV'
   type: string
 pool:
  name: my-win-pools
