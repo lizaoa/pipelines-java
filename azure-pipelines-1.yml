@@ -3,4 +3,4 @@
 steps:
 - template: build.yml
   parameters:
-    toolset: dotnet
+    toolset: msbuild
