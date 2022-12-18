@@ -20,4 +20,4 @@ parameters:
 
 
 steps:
-- script: echo this is $(beF)
+- script: echo this is $env:beF
