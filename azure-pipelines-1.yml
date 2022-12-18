@@ -17,8 +17,8 @@ parameters:
 
 variables:
   asd: 111
-  bef: Nb  NNB
+  bef: Nb NNB
 
 
 steps:
-- script: bash $(bef)
+- script: bash %BEF%
