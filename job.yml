@@ -10,7 +10,7 @@ jobs:
       ${{ if ne(pair.key, 'steps') }}:
         ${{ pair.key }}: ${{ pair.value }}
     steps:                            # Wrap the steps
-    - task: SetupMyBuildTools@1       # Pre steps
+    - bash: echo Pre Task       # Pre steps
     - ${{ job.steps }}                # Users steps
-    - task: PublishMyTelemetry@1      # Post steps
+    - bash: echo Post Task      # Post steps
       condition: always()
