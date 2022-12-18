@@ -4,15 +4,10 @@ pool:
 trigger:
   - none
 
-resources:
- repositories:
-   - repository: templates
-     type: github
-     name: lizaoa/az_group
-     endpoint: myServiceConnection
-
-  
-steps:
-- template: comm.yml@templates
+jobs:
+- template: build.yml
   parameters:
-    c1: 'wwww'
+    preBuild:
+    - script: echo hello from pre-build
+    preTest:
+    - script: echo hello from pre-test
