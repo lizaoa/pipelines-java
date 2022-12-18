@@ -5,10 +5,10 @@ parameters:
 
 steps:
 - bash: |
-    if [ -z ${{ parameters.solution }} ]; then
+    if [ -z '${{ parameters.solution }}' ]; then
       echo IS NULL AND $SOLUTION
     fi
   env:
     SOLUTION: ${{ parameters.solution }}
   displayName: Check for required parameters
-- bash: echo ${{ parameters.solution }}
+- bash: echo ${{ parameters.solution }}---$SOLUTION
