@@ -17,5 +17,5 @@ parameters:
     - b1: 222         
 steps:
 - ${{ each step in parameters.myobject }}:
-    - ${{ if eq( asd,'111') }}:
+    - ${{ if eq( variables.asd,'111') }}:
           - script: echo gggg --${{ step.a1 }}--${{ step.a1.value }}
