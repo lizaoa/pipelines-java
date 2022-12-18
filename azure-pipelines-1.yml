@@ -4,8 +4,14 @@ pool:
 
 trigger:
   none
- 
-steps:
-- template: cs.yml
+
+jobs:
+- template: job.yml
   parameters:
-    solution: bbbb
+    jobs:
+    - job: A
+      steps:
+      - script: echo This will get jobAAAa
+    - job: B
+      steps:
+      - script: echo So will this!get jobBBBBBb
