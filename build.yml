@@ -1,5 +1,4 @@
 # File: steps/build.yml
-
 parameters:
 - name: 'toolset'
   default: msbuild
