@@ -17,8 +17,8 @@ parameters:
 
 variables:
   asd: 111
-  bef: Nb NNB ${{ parameters.mystring }}--
+  bef: Nb NNB ${{parameters.mystring}}--
 
 
 steps:
-- script: echo this is ${{ variables.bef }}
+- script: echo this is ${{variables.bef}}
