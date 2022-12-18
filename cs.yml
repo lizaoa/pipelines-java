@@ -4,11 +4,11 @@ parameters:
   type: string
 
 steps:
-- script: |
+- powershell: |
     if [ -z '${{ parameters.solution }}' ]; then
-      echo IS NULL AND %SOLUTION%
+      echo IS NULL AND $SOLUTION
     fi
   env:
     SOLUTION: ${{ parameters.solution }}
   displayName: Check for required parameters
-- script: echo ${{ parameters.solution }}---%SOLUTION%
+- powershell: echo ${{ parameters.solution }}---$env:SOLUTION--$SOLUTION
