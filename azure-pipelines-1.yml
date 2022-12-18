@@ -5,5 +5,3 @@ trigger:
  
 steps:
 - template: cs.yml
-  parameters:
-    solution: yes
