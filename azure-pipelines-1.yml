@@ -7,7 +7,7 @@ pool:
 steps:
 - bash: |
     if [ -z "$SOLUTION" ]; then
-      echo "##vso[task.logissue type=error;]Missing template parameter \"solution\""
+      echo "##vso[task.logissue type=error;]Missing template LI parameter \"solution\""
       echo "##vso[task.complete result=Failed;]"
     fi
   env:
