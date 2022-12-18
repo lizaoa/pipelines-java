@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: 'wwerwer'
+  default: ''
   type: string
 pool:
  name: my-win-pools
