@@ -3,7 +3,9 @@ pool:
 
 trigger:
   - none
-
+variables:
+  asd: 111
+  
 parameters:
 - name: myString
   type: string
