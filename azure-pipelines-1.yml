@@ -4,6 +4,9 @@ pool:
 trigger:
   - none
 
+variables:
+  asd: 111
+  bef: Nbaa NNB ${{parameters.mystring}}--
   
 parameters:
 - name: myString
@@ -14,10 +17,6 @@ parameters:
   default: 
     - a1: 111
     - b1: 222         
-
-variables:
-  asd: 111
-  bef: Nbaa NNB ${{parameters.mystring}}--
 
 
 steps:
