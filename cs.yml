@@ -5,7 +5,7 @@ parameters:
 
 steps:
 - bash: |
-    if [ -z "$SOLUTION" ]; then
+    if [ -z ${{ parameters.solution }} ]; then
       echo IS NULL AND $SOLUTION
     fi
   env:
