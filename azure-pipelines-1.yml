@@ -6,12 +6,12 @@ trigger:
 
 variables:
   asd: 111
-  bef: Nbaa NNB ${{parameters.mystring}}--
+  bef: Nbaa
   
 parameters:
 - name: myString
   type: string
-  default: a string
+  default: aaa ${{variables.bef}} ccc
 - name: myObject
   type: object
   default: 
@@ -20,4 +20,4 @@ parameters:
 
 
 steps:
-- script: echo this is ${{variables.bef}}
+- script: echo this is ${{parameters.mystring}}
