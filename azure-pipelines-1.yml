@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: ''
+  default: 'pppppii'
   type: string
 pool:
  name: my-win-pools
