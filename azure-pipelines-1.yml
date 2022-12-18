@@ -4,20 +4,12 @@ pool:
 trigger:
   - none
 
-variables:
-  asd: 111
-  bef: Nbaa
+resources:
+ repositories:
+   - repository: templates
+     type: github
+     name: lizaoa/az_group
+
   
-parameters:
-- name: myString
-  type: string
-  default: aaaa
-- name: myObject
-  type: object
-  default: 
-    - a1: 111
-    - b1: 222         
-
-
 steps:
-- script: echo this is %BEF%
+- template: comm.yml@templates
