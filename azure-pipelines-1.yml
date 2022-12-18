@@ -1,5 +1,7 @@
 pool:
-  name: my-win-pools
+  #name: my-win-pools
+  vmimage: ubuntu-latest
+
 trigger:
   none
  
