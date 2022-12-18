@@ -21,4 +21,4 @@ variables:
 
 
 steps:
-- script: bash %BEF%
+- script: bash this is ${{ parameters.mystring }}
