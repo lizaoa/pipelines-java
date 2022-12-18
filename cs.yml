@@ -11,4 +11,5 @@ steps:
   env:
     SOLUTION: ${{ parameters.solution }}
   displayName: Check for required parameters
-- bash: echo ${{ parameters.solution }}-----$(SOLUTION)
+  name: stna
+- bash: echo ${{ parameters.solution }}--$sta.SOLUTION---$(sta.SOLUTION)
