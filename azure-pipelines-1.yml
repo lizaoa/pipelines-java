@@ -6,7 +6,7 @@ pool:
  name: my-win-pools
 steps:
 - bash: |
-    if [ -z "$SOLUTION" ]; then
+    if [ -z "aaa" ]; then
       echo "##vso[task.logissue type=error;]Missing template LI parameter \"solution\""
       echo "##vso[task.complete result=Failed;]"
     fi
