@@ -24,4 +24,4 @@ steps:
 - ${{ each step in parameters.myobject }}:
   - ${{ if eq( variables.asd,'1121') }}:
      - script: echo gggg--${{ step.a1 }}--${{ step.a1.value }}
-- script: bash $(bef)
+- script: bash $(variables.bef)
