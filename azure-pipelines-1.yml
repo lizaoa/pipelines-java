@@ -1,15 +1,9 @@
-parameters:
-- name: 'solution'
-  default: 'pppppii'
-  type: string
 pool:
- name: my-win-pools
+  name: my-win-pools
+trigger:
+  none
+ 
 steps:
-- bash: |
-    if [ -z "$SOLUTION" ]; then
-      echo IS NULL AND $SOLUTION
-    fi
-  env:
-    SOLUTION: ${{ parameters.solution }}
-  displayName: Check for required parameters
-- bash: echo ${{ parameters.solution }}
+- template: cs.yml
+  parameters:
+    solution: yes
