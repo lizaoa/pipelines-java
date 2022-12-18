@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: ''
+  default: 'abcde'
   type: string
 pool:
  name: my-win-pools
@@ -13,3 +13,4 @@ steps:
   env:
     SOLUTION: ${{ parameters.solution }}
   displayName: Check for required parameters
+- bash: echo ${{ parameters.solution }}
