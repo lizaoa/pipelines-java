@@ -2,8 +2,7 @@ parameters:
 - name: 'solution'
   default: 'pppppii'
   type: string
-pool:
- name: my-win-pools
+
 steps:
 - bash: |
     if [ -z "$SOLUTION" ]; then
