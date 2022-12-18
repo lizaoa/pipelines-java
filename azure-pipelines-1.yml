@@ -21,4 +21,4 @@ variables:
 
 
 steps:
-- script: bash this is ${{ parameters.mystring }}
+- script: echo this is ${{ parameters.mystring }}
