@@ -1,6 +1,14 @@
-# File: azure-pipelines.yml
+parameters:
+- name: 'solution'
+  default: ''
+  type: string
 
 steps:
-- template: build.yml
-  parameters:
-    toolset: msbuild
+- bash: |
+    if [ -z "$SOLUTION" ]; then
+      echo "##vso[task.logissue type=error;]Missing template parameter \"solution\""
+      echo "##vso[task.complete result=Failed;]"
+    fi
+  env:
+    SOLUTION: ${{ parameters.solution }}
+  displayName: Check for required parameters
