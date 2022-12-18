@@ -9,7 +9,10 @@ resources:
    - repository: templates
      type: github
      name: lizaoa/az_group
+     endpoint: myServiceConnection
 
   
 steps:
 - template: comm.yml@templates
+  parameters:
+    c1: 'wwww'
