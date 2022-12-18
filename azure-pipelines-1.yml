@@ -18,4 +18,4 @@ parameters:
 steps:
 - ${{ each step in parameters.myobject }}:
     - ${{ if eq( step.a1,'111') }}:
-          - script: echo gggg -- ${{ step.a1 }}
+          - script: echo gggg --${{ step.a1 }}--${{ step.a1.value }}
