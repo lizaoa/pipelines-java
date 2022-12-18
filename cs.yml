@@ -1,6 +1,6 @@
 parameters:
 - name: 'solution'
-  default: ''
+  default: 'ggg'
   type: string
 
 steps:
