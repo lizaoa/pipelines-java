@@ -1,0 +1,25 @@
+# File: jobs/build.yml
+
+parameters:
+- name: 'preBuild'
+  type: stepList
+  default: []
+- name: 'preTest'
+  type: stepList
+  default: []
+- name: 'preSign'
+  type: stepList
+  default: []
+
+jobs:
+- job: Build
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - script: cred-scan
+  - ${{ parameters.preBuild }}
+  - task: msbuild@1
+  - ${{ parameters.preTest }}
+  - task: vstest@2
+  - ${{ parameters.preSign }}
+  - script: sign
