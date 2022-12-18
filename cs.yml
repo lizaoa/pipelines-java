@@ -4,11 +4,11 @@ parameters:
   type: string
 
 steps:
-- bash: |
+- script: |
     if [ -z '${{ parameters.solution }}' ]; then
-      echo IS NULL AND $SOLUTION
+      echo IS NULL AND %SOLUTION%
     fi
   env:
     SOLUTION: ${{ parameters.solution }}
   displayName: Check for required parameters
-- bash: echo ${{ parameters.solution }}---$env:SOLUTION
+- script: echo ${{ parameters.solution }}---%SOLUTION%
