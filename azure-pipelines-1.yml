@@ -7,3 +7,5 @@ trigger:
  
 steps:
 - template: cs.yml
+  parameters:
+    solution: bbbb
