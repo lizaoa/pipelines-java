@@ -17,7 +17,7 @@ parameters:
 
 variables:
   asd: 111
-  bef: Nb ${{parameters.mystring}} NNB
+  bef: "Nb ${{ parameters.mystring }} NNB"
 
 
 steps:
