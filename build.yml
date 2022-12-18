@@ -1,25 +1,24 @@
-# File: jobs/build.yml
+# File: steps/build.yml
 
 parameters:
-- name: 'preBuild'
-  type: stepList
-  default: []
-- name: 'preTest'
-  type: stepList
-  default: []
-- name: 'preSign'
-  type: stepList
-  default: []
+- name: 'toolset'
+  default: msbuild
+  type: string
+  values:
+  - msbuild
+  - dotnet
 
-jobs:
-- job: Build
-  pool:
-    vmImage: 'windows-latest'
-  steps:
-  - script: cred-scan
-  - ${{ parameters.preBuild }}
+steps:
+# msbuild
+- ${{ if eq(parameters.toolset, 'msbuild') }}:
   - task: msbuild@1
-  - ${{ parameters.preTest }}
   - task: vstest@2
-  - ${{ parameters.preSign }}
-  - script: sign
+
+# dotnet
+- ${{ if eq(parameters.toolset, 'dotnet') }}:
+  - task: dotnet@1
+    inputs:
+      command: build
+  - task: dotnet@1
+    inputs:
+      command: test
