@@ -1,13 +1,6 @@
-pool:
-  name: my-win-pools
+# File: azure-pipelines.yml
 
-trigger:
-  - none
-
-jobs:
+steps:
 - template: build.yml
   parameters:
-    preBuild:
-    - script: echo hello from pre-build
-    preTest:
-    - script: echo hello from pre-test
+    toolset: dotnet
