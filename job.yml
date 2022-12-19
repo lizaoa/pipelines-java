@@ -9,7 +9,7 @@ jobs:
   - ${{ each pair in job }}:          # Insert all properties other than "steps"
         ${{ if ne(pair.key, 'steps') }}:
           ${{ pair.key }}: ${{ pair.value }}
-          echo what is ${{ pair.key }} -- ${{ pair.value }}
+          bash: echo what is ${{ pair.key }} -- ${{ pair.value }}
     steps:                            # Wrap the steps
     - bash: echo Pre Task       # Pre steps
     - ${{ job.steps }}                # Users steps
