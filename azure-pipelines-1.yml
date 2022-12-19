@@ -9,4 +9,4 @@ variables:
   - group: vgtest
 
 steps:
-  -script: echo $it is $vgva
+  -script: echo it is $vgva1
