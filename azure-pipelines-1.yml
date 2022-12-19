@@ -5,13 +5,8 @@ pool:
 trigger:
   none
 
-jobs:
-- template: job.yml
-  parameters:
-    jobs:
-    - job: A
-      steps:
-      - script: echo This will get jobAAAa
-    - job: B
-      steps:
-      - script: echo So will this!get jobBBBBBb
+variables:
+  - group: vgtest
+
+steps:
+  -script: echo $it is $vgva
