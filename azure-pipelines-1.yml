@@ -8,14 +8,17 @@ resources:
     - repository: templates
       type: github
       name: lizaoa/az_group
-      ref: refs/tags/v1.0 # optional ref to pin to
+      #ref: refs/tags/v1.0 # optional ref to pin to
       endpoint: TestProj
 
+
 jobs:
+- job: another
+  steps:
+  - script: echo aaaaaa-- $(vgva1)
+  - script: git checkout v1.1
+
 - template: comm.yml@templates  # Template reference
   parameters:
     c1: 'UUUUU windows of latest'
 
-- job: another
-  steps:
-  - script: echo aaaaaa-- $(vgva1)
