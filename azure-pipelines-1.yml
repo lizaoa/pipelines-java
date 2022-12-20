@@ -18,6 +18,6 @@ resources:
       endpoint: TestProj
 
 steps:
-  - checkout: Myrep
+  - checkout: Myrep@refs/tags/v1.0
   - script: dir $(build.sourcesdirectory)
 
