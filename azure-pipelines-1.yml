@@ -19,7 +19,7 @@ jobs:
 - job: another
   steps:
   - script: echo aaaaaa-- $(vgva1)
-  - checkout: git://TestJ/az_group@regs/taags/v1.0
+  - checkout: git://TestProj/az_group@regs/taags/v1.0
 
 
 - template: comm.yml@templates  # Template reference
