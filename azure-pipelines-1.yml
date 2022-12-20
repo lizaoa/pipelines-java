@@ -6,9 +6,9 @@ resources:
       type: github
       name: lizaoa/az_group
       #ref: refs/tags/v1.0 # optional ref to pin to
-      endpoint: togithub
+      endpoint: TestProj
 
 jobs:
-- template: common.yml@templates  # Template reference
+- template: comm.yml@templates  # Template reference
   parameters:
-    vmImage: 'windows-latest'
+    c1: 'windows-latest'
