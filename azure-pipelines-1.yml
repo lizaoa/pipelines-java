@@ -3,26 +3,21 @@
 variables:
   - group: vgtest
 
+pool:
+  name: my-win-pools
+
 trigger:
    none
 
 resources:
   repositories:
-    - repository: templates
+    - repository: Myrep
       type: github
       name: lizaoa/az_group
       #ref: refs/tags/v1.0 # optional ref to pin to
       endpoint: TestProj
 
-
-jobs:
-- job: another
-  steps:
-  - script: echo aaaaaa-- $(vgva1)
-  - checkout: git://lizaoa/az_group@regs/taags/v1.0
-
-
-- template: comm.yml@templates  # Template reference
-  parameters:
-    c1: 'UUUUU windows of latest'
+steps:
+  - checkout: Myrep
+  - script: dir $(build.sourcesdirectory)
 
