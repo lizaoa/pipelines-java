@@ -20,5 +20,5 @@ resources:
 steps:
   - checkout: Myrep
   - script: dir $(build.sourcesdirectory)
-  - script: checkout v1.0
+  - script: git checkout v1.0
 
