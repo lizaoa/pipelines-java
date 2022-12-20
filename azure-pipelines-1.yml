@@ -3,6 +3,9 @@
 variables:
   - group: vgtest
 
+trigger:
+   none
+
 resources:
   repositories:
     - repository: templates
@@ -16,7 +19,8 @@ jobs:
 - job: another
   steps:
   - script: echo aaaaaa-- $(vgva1)
-  - script: git checkout v1.1
+  - checkout: git://TestJ/az_group@regs/taags/v1.0
+
 
 - template: comm.yml@templates  # Template reference
   parameters:
