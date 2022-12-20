@@ -14,7 +14,7 @@ resources:
 jobs:
 - template: comm.yml@templates  # Template reference
   parameters:
-    c1: 'windows of latest'
+    c1: 'UUUUU windows of latest'
 
 - job: another
   steps:
