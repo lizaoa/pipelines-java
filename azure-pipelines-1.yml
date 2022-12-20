@@ -1,5 +1,8 @@
 # Repo: Contoso/WindowsProduct
 # File: azure-pipelines.yml
+variables:
+  - group: vgtest
+
 resources:
   repositories:
     - repository: templates
@@ -15,4 +18,4 @@ jobs:
 
 - job: another
   steps:
-  - script: echo aaaaaa
+  - script: echo aaaaaa-- $(vgva1)
