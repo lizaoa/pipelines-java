@@ -12,3 +12,7 @@ jobs:
 - template: comm.yml@templates  # Template reference
   parameters:
     c1: 'windows of latest'
+
+- job: another
+  steps:
+  - script: echo aaaaaa
