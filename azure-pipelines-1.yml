@@ -20,6 +20,6 @@ resources:
 steps:
   - checkout: Myrep
   - script: dir $(build.sourcesdirectory)
-  - script: cat comm.yml
+  - script: type comm.yml
   - script: git checkout v1.0
-  - script: cat comm.yml
+  - script: type comm.yml
