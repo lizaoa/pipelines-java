@@ -23,4 +23,4 @@ steps:
   - script: type comm.yml
   - script: git checkout $(vgva1)
   - script: type comm.yml
-  - template: acomm.yml
+  - template: acom.yml
