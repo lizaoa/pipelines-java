@@ -1,0 +1,7 @@
+parameters:
+- name: c1
+  type: string
+  default: 'comm para1'
+
+steps:
+  - script: echo TTTthis is the common param -${{ parameters.c1 }}-
